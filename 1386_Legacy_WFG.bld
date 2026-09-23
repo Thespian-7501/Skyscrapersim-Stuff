@@ -1,0 +1,171 @@
+#NewBuild Template Building File
+#Thank you for downloading NewBuild! Follow these instructions to begin making the building of your dreams!
+
+#Make sure the Template building file has been copied to the right place as per the instructions in the NewBuild User's Manual. Once that has been done, follow these annotations to customise your building setup.
+
+#Import NewBuild script - do not change this line
+<Include NewBuild/Script.txt> #credit to Lift Excelsior
+
+#Elevators
+#Remove the hashtag before the NB_ImportElevators() line to import the Elevators module, which allows you to create elevators. This should only be done once the elevators are ready to be installed as the elevators have a lot of preloaded textures that may slow down loading.
+
+#Then remove the first hashtag from any of the EnableFixtures lines to enable specific fixture sets. You should only enable the fixtures you intend to use in your building, in order to keep loading time down.
+
+NB_ImportElevators()
+#NB_DisableAllFixtures()
+
+#NB_EnableFixtures(1) #remove the first hashtag to enable KONE KSS-670 fixtures
+#NB_EnableFixtures(2) #remove the hashtag to enable KONE KSS-570 fixtures
+#NB_EnableFixtures(3) #remove the hashtag to enable KONE KSS-D fixtures
+#NB_EnableFixtures(4) #remove the hashtag to enable KONE Sigma fixtures
+NB_EnableFixtures(5) #remove the hashtag to enable KONE M fixtures
+#NB_EnableFixtures(6) #remove the hashtag to enable Kleemann fixtures
+#NB_EnableFixtures(7) #remove the hashtag to enable Dewhurst US91 fixtures
+#NB_EnableFixtures(8) #remove the hashtag to enable Advance fixtures
+#NB_EnableFixtures(9) #remove the hashtag to enable Dewhurst US90 fixtures
+#NB_EnableFixtures(10) #remove the hashtag to enable Orona 3G fixtures
+#NB_EnableFixtures(11) #remove the hashtag to enable MP fixtures
+#NB_EnableFixtures(12) #remove the hashtag to enable ThyssenKrupp fixtures
+#NB_EnableFixtures(13) #remove the hashtag to enable Mitsubishi fixtures
+#NB_EnableFixtures(14) #remove the hashtag to enable Schindler D Line fixtures
+#NB_EnableFixtures(15) #remove the hashtag to enable Schindler FI GS fixtures
+#NB_EnableFixtures(16) #remove the hashtag to enable Otis Gen2 fixtures
+#NB_EnableFixtures(17) #remove the hashtag to enable Otis Lumina fixtures
+NB_EnableFixtures(18) #remove the hashtag to enable Otis Series 1 fixtures
+#NB_EnableFixtures(19) #remove the hashtag to enable Schindler M-Series fixtures
+#NB_EnableFixtures(20) #remove the hashtag to enable Schindler FI MXB fixtures
+
+
+#If you want custom floor numbering, place any NB_Rename functions below this text in the area denoted by the hyphens. Use the lines with the hashtags before them as examples. The number of the floor you want to rename goes in the brackets before the comma and the new name goes after.
+
+#Example: NB_Rename(0, G)
+#Example: NB_Rename(-1, B)
+NB_Rename(0, G)
+#----
+#----
+
+#If you want custom elevator fixture textures, place any NB_CustomElevFixtures functions below this text in the area denoted by the hyphens, and place any NB_CustomRename functions immediately afterwards. Details on how to use these functions are available in the Elevators section of the user manual.
+#----
+#----
+#----
+
+#Finish loading fixture textures - do not change this line
+NB_FinishFixtures()
+
+#Map
+#Choose a map for your building. The default map is the Standard map (city with grass on edge). To change this, change the number in the line below.
+
+#The maps are as follows
+#0 - Standard
+#1 - Grassland
+#2 - River
+#3 - Beach
+#4 - Desert
+
+NB_Map(1)
+
+#Extra Modules:
+
+#Advanced Objects
+#Remove the hashtag before the line below to import the Advanced Objects module (enabling any object listed in the user manual as an Advanced Object (things such as shopfronts, parking, skylights, floor signs and more). This should only be done if you intend to use these objects in your building.
+#NB_ImportAdvanced()
+
+#Furniture
+#Remove the hashtag before the line below to import the Furniture module, enabling realistic furniture functions. This should only be done if you intend to use these objects in your building.
+#NB_ImportFurniture()
+
+#Cars
+#Remove the hashtag before the line below to import the Cars module, enabling realistic randomly generated car models. This should only be done if you intend to add these cars to your building.
+#NB_ImportCars()
+
+#Default textures (for advanced users)
+#If you wish to modify which textures are pre-selected at launch, place any NB_Default___Texture functions in the area denoted by the hyphens, using the one with the hashtag in front of it as an example. You can learn more about the NewBuild texture system in the user's manual.
+#Example: NB_DefaultFloorTexture(Wood5)
+
+#Finish building setup - do not change this line
+NB_Setup()
+
+#Spawn Point
+#Change the numbers in the line below to set a custom spawn point for your building. The first number is the x value and the second number is the z value. To find out what numbers you need for the point that you want, go to the desired point in-game, look at the Simulator Control Panel window and copy the numbers displayed in the "Camera Position" line.
+NB_SpawnPoint(0, 0)
+
+#If you also want to spawn with a custom rotation, change the numbers in the line below. To get the right numbers, face the desired direction while standing at your desired spawn point and copy the numbers from the Camera Rotation line of the Control Panel.
+NB_SpawnRotation(0, 0, 0)
+
+#Your building is now set up and ready to go. Place all of your object creation commands below this line.
+
+
+
+<Floors 0 to 44>
+NB_Build(-100, -100, 100, 50) #Main structure
+NB_Atrium(-40, -70, 40, 20, true, true, true, true, 0, 44, true)
+<EndFloors>
+
+
+
+<Floor 0>
+NB_Room(-100, -50, -80, 20, true, false, true, true)
+NB_Room(80, -50, 100, 20, true, true, false, true)
+NB_Door(0, -100, 2, front)
+<EndFloor>
+
+#Elevators
+
+NB_Elevator(0, 20, 5, 2, 3, 20, -66.5, 6, 2, 4, 2, Wall1, true, 1) #Locals to 20
+NB_Elevator(0, 44, 18, 3, 2, 0, 50, 5, 1, 3, 1, Wall1, true, 1)
+
+NB_Elevator(0, 44, 5, 2, 3, -20, -66.5, 6, 4, 2, 2, Wall1, false, 3, 26)
+NB_Button(0)
+NB_Button(20)
+NB_Button(21)
+NB_Button(22)
+NB_Button(23)
+NB_Button(24)
+NB_Button(25)
+NB_Button(26)
+NB_Button(27)
+NB_Button(28)
+NB_Button(29)
+NB_Button(30)
+NB_Button(31)
+NB_Button(32)
+NB_Button(33)
+NB_Button(34)
+NB_Button(35)
+NB_Button(36)
+NB_Button(37)
+NB_Button(38)
+NB_Button(39)
+NB_Button(40)
+NB_Button(41)
+NB_Button(42)
+NB_Button(43)
+NB_Button(44)
+<Floor 0>
+#New block for GND for express elevators.
+NB_ElevExits(south)
+<EndFloor>
+<Floors 20 to 44>
+NB_ElevExits(south)
+#For express set
+<EndFloors>
+NB_Stairs(-40, 15, left, 0, 44, 2, true, true, true)
+
+<Floors 1 to 44>
+#West block rooms
+NB_Room(-100, -100, -47, -75, false, false, true, true)
+NB_Room(-100, -75, -47, -50, false, false, true, true)
+NB_Room(-100, -50, -47, -25, false, false, true, true)
+NB_Room(-100, -25, -47, 0, false, false, true, true)
+NB_Room(-100, 0, -47, 25, false, false, true, true)
+NB_Room(-100, 25, -47, 50, false, false, true, false)
+
+#East block roons
+NB_Room(47, -100, 100, -75, false, true, false, true)
+NB_Room(47, -75, 100, -50, false, true, false, true)
+NB_Room(47, -50, 100, -25, false, true, false, true)
+NB_Room(47, -25, 100, 0, false, true, false, true)
+NB_Room(47, 0, 100, 25, false, true, false, true)
+NB_Room(47, 25, 100, 50, false, true, false, false) 
+<EndFloors>
+
