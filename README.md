@@ -5,7 +5,7 @@ Welcome to Sleepy_Thespian's Skyscrapersim GitHub repo!
 Here, you'll find anything and everything I publish for Skyscrapersim. I'll try including links to download data for my stuff when I release updates. All of my builds require Skyscrapersim 2.1 Alpha or later and Lift Excelsior Integration Project as all of my buildings are made using NewBuild which is part of that.
 Whether you found me via Discord, or on google when looking for more custom buildings for Skyscrapersim, I'm glad you're here.
 
-##TO DOWNLOAD BUILDINGS FROM HERE:
+## TO DOWNLOAD BUILDINGS FROM HERE:
 1: Locate the desired file in my repo. If I have a lot of buildings here, the organization is as follows:
   Layer 1 - Real-life or Fictional
   Layer 2 - City; Under both layer 1 categories, the next level is by city. For real-life replicas, the folders will also contain the state abbreviation. For fictional, it depends, but generally, layer 2 items are just a city name without a state.
@@ -16,10 +16,10 @@ Whether you found me via Discord, or on google when looking for more custom buil
 4: Open a second file explorer window and navigate to your Skyscraper folder. Make sure to enter that folder.
 5: Click and drag the BLD file from your downloads to your Buildings folder, which you should have in front of you if you followed step 4 correctly.
 
-##To verify you did it correctly:
+## To verify you did it correctly:
 Open Skyscrapersim, click "Other Buildings" then scroll until you find the name of the building you just downloaded. Once you've located the building, double-click to open it, or select it and click "OK".
 
-##Troubleshooting:
+## Troubleshooting:
 
 "Why do I get error textures?"
 -If you get a message on load that certain files are missing/could not load, first thing to check is if you downloaded any data packs I listed. In the city folders, as well as campus folders, I'll list data packs necessary for my builds to load correctly. Links will be provided for those downloads.
