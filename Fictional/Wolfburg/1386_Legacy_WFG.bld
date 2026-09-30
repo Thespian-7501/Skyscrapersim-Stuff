@@ -99,6 +99,7 @@ NB_SpawnRotation(0, 0, 0)
 <Floors 0 to 44>
 NB_Build(-100, -100, 100, 50) #Main structure
 NB_Atrium(-40, -70, 40, 20, true, true, true, true, 0, 44, true)
+NB_DoorTexture(Door6)
 <EndFloors>
 
 
@@ -150,22 +151,55 @@ NB_ElevExits(south)
 #For express set
 <EndFloors>
 NB_Stairs(-40, 15, left, 0, 44, 2, true, true, true)
+NB_Stairs(40, 15, right, 0, 44, 2, true, true, true)
 
 <Floors 1 to 44>
 #West block rooms
 NB_Room(-100, -100, -47, -75, false, false, true, true)
+NB_Door(-47, -94, 1, right, left)
 NB_Room(-100, -75, -47, -50, false, false, true, true)
+NB_Door(-47, -56, 1, right, right)
 NB_Room(-100, -50, -47, -25, false, false, true, true)
+NB_Door(-47, -44, 1, right, left)
 NB_Room(-100, -25, -47, 0, false, false, true, true)
+NB_Door(-47, -6, 1, right, right)
 NB_Room(-100, 0, -47, 25, false, false, true, true)
+NB_Door(-47, 6, 1, right, left)
 NB_Room(-100, 25, -47, 50, false, false, true, false)
+NB_Door(-47, 44, 1, right, right)
 
 #East block roons
 NB_Room(47, -100, 100, -75, false, true, false, true)
+NB_Door(47, -94, 1, left, right)
 NB_Room(47, -75, 100, -50, false, true, false, true)
+NB_Door(47, -56, 1, left, left)
 NB_Room(47, -50, 100, -25, false, true, false, true)
+NB_Door(47, -44, 1, left, right)
 NB_Room(47, -25, 100, 0, false, true, false, true)
+NB_Door(47, -6, 1, left, left)
 NB_Room(47, 0, 100, 25, false, true, false, true)
-NB_Room(47, 25, 100, 50, false, true, false, false) 
+NB_Door(47, 6, 1, left, right)
+NB_Room(47, 25, 100, 50, false, true, false, false)
+NB_Door(47, 44, 1, left, left)
+
+#West Block Bathrooms
+NB_Room(-57, -87, -47, -63, true, true, false, true)
+NB_Door(-52, -87, 1, front, left)
+NB_Door(-52, -63, 1, back, left)
+NB_Room(-57, -37, -47, -13, true, true, false, true)
+NB_Room(-57, 13, -47, 37, true, true, false, true)
+
+
+#East Block Bathrooms
+NB_Room(47, -87, 57, -63, true, false, true, true)
+NB_Door(52, -87, 1, front, right)
+NB_Door(52, -63, 1, back, right)
+NB_Room(47, -37, 57, -13, true, false, true, true)
+NB_Door(52, -37, 1, front, right)
+NB_Door(52, -13, 1, back, right)
+NB_Room(47, 13, 57, 37, true, false, true, true)
+NB_Door(52, 13, 1, front, right)
+NB_Door(52, 37, 1, back, right)
+
 <EndFloors>
 
