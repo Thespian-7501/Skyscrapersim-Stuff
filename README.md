@@ -32,4 +32,10 @@ Open Skyscrapersim, click "Other Buildings" then scroll until you find the name 
 
 ## Note:
 If you're downloading my build from here and not the Skyscraper Forum, note that version numbers in the 2nd segment only increment when Skyscraper Forum releases go out.  
-For example: If you are on 1386 Legacy V0.2A_2, the _2 means it's 2 patches after the 0.2A main release.
+For example: If you are on 1386 Legacy V0.2A_2, the _2 means it's 2 patches after the 0.2A main release. This repo hosts downloads for the latest dev builds of my buildings, not just latest milestone release.  
+Exact version format:  
+C.iA_P  
+C = Dev Cycle, where 0 means early development, 1 means basics are complete but updates will come still for improvements, and 2 or beyond means further generations.  
+i = Increment of release in current cycle.  
+A = Alpha tag.
+_P = Patch number. Used mostly in dev builds, but may be used in live releases on Skyscraper forum for hotfixes.
