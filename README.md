@@ -29,3 +29,7 @@ Open Skyscrapersim, click "Other Buildings" then scroll until you find the name 
 
 "I can't find the building"  
 -Make sure you put the BLD file in the Buildings folder in Skyscraper. If you put it anywhere else, Skyscrapersim will not find it.  
+
+## Note:
+If you're downloading my build from here and not the Skyscraper Forum, note that version numbers in the 2nd segment only increment when Skyscraper Forum releases go out.  
+For example: If you are on 1386 Legacy V0.2A_2, the _2 means it's 2 patches after the 0.2A main release.
